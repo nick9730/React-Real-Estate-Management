@@ -95,7 +95,7 @@ export const GetEstateByID = async (
   id: number,
   user_id: number | undefined | string
 ) => {
-  let { data: estates, error } = await supabase
+  const { data: estates, error } = await supabase
     .from("estates")
     .select("*")
     .eq("id", id ? id : 0)

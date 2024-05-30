@@ -84,7 +84,7 @@ export default function RangeInput({
         valueLabelDisplay="on"
         disableSwap
         onChange={OnChange}
-        max={max}
+        max={max as number | undefined}
         valueLabelFormat={(value: number) => (
           <div className="w-12 text-[10px] text-center whitespace-normal ">
             {role === "price" ? formatCurrency(value) + "€" : value + "m²"}

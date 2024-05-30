@@ -15,7 +15,7 @@ type RangeInputProps = {
   value: number;
 
   role: "price" | "area";
-  max: number | undefined | null;
+  max: number  | null;
   diffrenceValue: number;
 };
 

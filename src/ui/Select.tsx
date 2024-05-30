@@ -18,7 +18,7 @@ export type SelectProps = {
       posX: number;
       posY: number;
     },
-    "type" | "location"
+    any
   >;
 };
 

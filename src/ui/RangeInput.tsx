@@ -15,7 +15,7 @@ type RangeInputProps = {
   value: number;
 
   role: "price" | "area";
-  max: number  | null;
+  max: number | null | undefined;
   diffrenceValue: number;
 };
 
@@ -33,6 +33,8 @@ export default function RangeInput({
     newValue: number | number[],
     activeThumb: number
   ) => {
+    console.log(event);
+
     if (!Array.isArray(newValue)) {
       return;
     }

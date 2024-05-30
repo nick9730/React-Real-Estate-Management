@@ -5,6 +5,7 @@ import { motion, useDragControls } from "framer-motion";
 
 export default function NavbarShortCut({ setClose, setPos, pos }: NavbarProps) {
   const handleDragEnd = (event: Event, info: { offset: { y: number } }) => {
+    console.log(event);
     setPos(pos + info.offset.y);
     localStorage.setItem("pos_y", (pos + info.offset.y).toString());
   };

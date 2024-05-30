@@ -6,17 +6,20 @@ export type SelectProps = {
   register?: UseFormRegisterReturn;
   className?: string;
   role: "bed" | "bath" | "type" | "location" | "";
-  field?: ControllerRenderProps<{
-    type: string;
-    description: string;
-    location: string;
-    price: number;
-    area: number;
-    bath: number;
-    bed: number;
-    posX: number;
-    posY: number;
-  }>;
+  field?: ControllerRenderProps<
+    {
+      type: string;
+      description: string;
+      location: string;
+      price: number;
+      bed: number;
+      bath: number;
+      area: number;
+      posX: number;
+      posY: number;
+    },
+    "type" | "location"
+  >;
 };
 
 export default function Select({ register, className, role }: SelectProps) {
